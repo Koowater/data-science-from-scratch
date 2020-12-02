@@ -122,9 +122,21 @@ def random_distances(dim: int, num_pairs: int) -> List[float]:
 import tqdm
 dimentions = range(1, 101)
 avg_distances = []
-mis_distances = []
+min_distances = []
 
 for dim in tqdm.tqdm(dimentions, desc="Curse of Dimentionality"):
     distances = random_distances(dim, 10000)
     avg_distances.append(sum(distances) / 10000)
     min_distances.append(min(distances))
+
+plt.plot(range(1, 101), avg_distances)
+plt.plot(range(1, 101), min_distances)
+plt.xlabel('# of dimentions')
+plt.title('10,000 Random Distances')
+plt.legend(['average distance', 'minimum distance'])
+plt.show()
+
+plt.plot(range(1, 101), [a / b for a, b in zip(min_distances, avg_distances)])
+plt.xlabel('# of dimentions')
+plt.title('Minimum Distance / Average Distance')
+plt.show()
