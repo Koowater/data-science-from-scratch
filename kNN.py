@@ -127,4 +127,4 @@ mis_distances = []
 for dim in tqdm.tqdm(dimentions, desc="Curse of Dimentionality"):
     distances = random_distances(dim, 10000)
     avg_distances.append(sum(distances) / 10000)
-    min_distnaces.append(min(distances))
+    min_distances.append(min(distances))
