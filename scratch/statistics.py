@@ -4,14 +4,14 @@ num_friends = [100.0,49,41,40,25,21,21,19,19,18,18,16,15,15,15,15,14,14,13,13,13
 from collections import Counter
 import matplotlib.pyplot as plt
 
-friend_counts = Counter(num_friends)
-xs = range(101)                         # largest value is 100
-ys = [friend_counts[x] for x in xs]     # height is just # of friends
-plt.bar(xs, ys)
-plt.axis([0, 101, 0, 25])
-plt.title("Histogram of Friend Counts")
-plt.xlabel("# of friends")
-plt.ylabel("# of people")
+# friend_counts = Counter(num_friends)
+# xs = range(101)                         # largest value is 100
+# ys = [friend_counts[x] for x in xs]     # height is just # of friends
+# plt.bar(xs, ys)
+# plt.axis([0, 101, 0, 25])
+# plt.title("Histogram of Friend Counts")
+# plt.xlabel("# of friends")
+# plt.ylabel("# of people")
 # plt.show()
 
 num_points = len(num_friends)               # 204
